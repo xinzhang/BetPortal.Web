@@ -19,3 +19,10 @@ To run the program
 To test the program
 * npm run test
 (every api and components have the corresponding test)
+
+To be enhanced,
+* mock the api test
+* add redux support
+* better UI for the customer list
+* navigation menus
+* add router support
