@@ -7,9 +7,13 @@ class CustomerList extends Component {
     return (
       <div className="row">
         {this.props.customers.map(item =>
-          <div key={item._id} className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-            CustomerName: {item.Customer}, Total Stake {item.TotalStake}
-            <CustomerItem bets={item.Bets} key={item._id} />
+          <div key={item._id} className="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+            <div className="thumbnail thumbnail-size">
+              <p>Customer Name: {item.Customer}</p>
+              <p>Total Stake: {item.TotalStake}</p>
+              <CustomerItem bets={item.Bets} key={item._id} />
+            </div>
+            <hr />
           </div>
         )}
       </div>

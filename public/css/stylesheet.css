@@ -1,0 +1,12 @@
+.navbar a {
+  text-decoration: none;
+}
+
+.paddingtop10 {
+  padding-top: 10px
+}
+
+.thumbnail-size {
+  height: 300px;
+  width:250px;
+}

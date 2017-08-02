@@ -9,14 +9,10 @@ export default class CustomerPage extends React.Component {
 
     constructor(props){
       super(props);
-      this.state = {
-        customers: []
-      }
     }
 
     componentDidMount() {
       getAllCustomers().then(data => {
-        console.log('returned:', data);
         this.setState({
           customers : data
         });
@@ -26,17 +22,17 @@ export default class CustomerPage extends React.Component {
     render() {
       return (
         <div className="container">
-        <div className="row">
-            <label>Total Customers = {this.state.customers.length} </label>
-        </div>
-        <div classnName="row">
-            <hr />
-        </div>
-        <div className="row">
-          <div>
-            <CustomersList customers={this.state.customers} />
+          <div className="row">              
+              <label className="paddingtop10">Total Customers {this.state.customers.length}</label>
           </div>
-        </div>
+          <div classnName="row">
+              <hr />
+          </div>
+          <div className="row">
+            <div>
+              <CustomersList customers={this.state.customers} />
+            </div>
+          </div>
       </div>
       );
     }
